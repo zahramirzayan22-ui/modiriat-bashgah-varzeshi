@@ -19,11 +19,11 @@
 پایگاه داده:(sqlite)
 
 ## مستندات:
-تحلیل نیازمندی ها docs/requirements.md
+[تحلیل نیازمندی ها ](docs/requirements.md)
 
-موارد کاربردی و سناریوها docs/use_cases.md
+[موارد کاربردی و سناریوها](docs/use_cases.md)
 
-طراحی سیستمdocs/architecture.md 
+[طراحی سیستم](docs/architecture.md) 
 
 ## برنامه زمانی اولیه:
 |مرحله|توضیحات|زمان|
