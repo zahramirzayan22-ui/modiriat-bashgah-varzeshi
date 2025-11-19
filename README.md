@@ -1,4 +1,4 @@
-# عنوان پروژه:(system_modiryat_bashgah_varzeshy)
+# عنوان پروژه:(Sports Club Management System)
 
 # نام و شماره دانشجویی:
 
