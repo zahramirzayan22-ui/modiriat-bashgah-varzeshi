@@ -1,54 +1,34 @@
-# Mermaid Code for Gym Management System Use Case Diagram
-```mermaid
-mermaid_code = """
-graph TD
-    %% Actors (بازیگران)
-    actor_customer[-- مشتری --]
-    actor_trainer[-- مربی --]
-    actor_admin[-- مدیر --]
+flowchart TD
 
-    %% System Boundary (محدوده سیستم)
-    subgraph System_Gym_Management [سیستم مدیریت باشگاه]
-        %% Customer Use Cases (موارد استفاده مشتری)
-        UC1(ثبت نام/تمدید عضویت)
-        UC2(رزرو کلاس/سرویس)
-        UC3(مشاهده برنامه تمرینی)
-        UC4(پرداخت هزینه)
-        
-        %% Trainer Use Cases (موارد استفاده مربی)
-        UC5(مدیریت برنامه تمرینی اعضا)
-        UC6(ثبت حضور و غیاب)
-        UC7(مشاهده گزارش کار روزانه)
-        
-        %% Admin Use Cases (موارد استفاده مدیر)
-        UC8(مدیریت اطلاعات اعضا)
-        UC9(مدیریت کلاس‌ها و زمان‌بندی)
-        UC10(گزارش‌گیری مالی و آماری)
-        UC11(مدیریت کاربران سیستم)
-    end
+    %% Actors
+    Member([🏋️‍♂️ Club Member])
+    Trainer([🧑‍🏫 Trainer])
+    Admin([👤 Admin])
 
-    %% Relationships (روابط)
-    
-    %% Customer Relationships
-    actor_customer --> UC1
-    actor_customer --> UC2
-    actor_customer --> UC3
-    actor_customer --> UC4
-    
-    %% Trainer Relationships
-    actor_trainer --> UC5
-    actor_trainer --> UC6
-    actor_trainer --> UC7
-    
-    %% Admin Relationships
-    actor_admin --> UC8
-    actor_admin --> UC9
-    actor_admin --> UC10
-    actor_admin --> UC11
-    
-    %% Includes/Extends (مثال برای نمایش ارتباطات پیچیده تر)
-    UC2 .> UC3 : <<include>> (مشاهده برنامه پیش‌نیاز است)
+    %% Use Cases
+    UC1((Register for Membership))
+    UC2((Book Training Session))
+    UC3((Request Facilities))
+    UC4((View Training History))
+    UC5((Approve Requests))
+    UC6((Manage Payments))
+    UC7((Manage Members))
+    UC8((Manage Trainers & Schedules))
 
-"""
+    %% Connections
+    Member --> UC1
+    Member --> UC2
+    Member --> UC3
+    Member --> UC4
 
-print(mermaid_code)
+    Trainer --> UC2
+    Trainer --> UC5
+
+    Admin --> UC7
+    Admin --> UC8
+    Admin --> UC6
+
+    %% Style Use Cases (تمام دایره‌ها صورتی)
+    style UC1 fill:#FFB6C1,stroke:#333,stroke-width:2px
+    style UC2 fill:#FFB6C1,stroke:#333,stroke-width:2px
+    style UC3 fill:#FFB6C1,stroke:#33…
