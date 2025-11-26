@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
 
     %% Actors
@@ -5,15 +6,15 @@ flowchart TD
     Trainer([🧑‍🏫 Trainer])
     Admin([👤 Admin])
 
-    %% Use Cases
-    UC1((Register for Membership))
-    UC2((Book Training Session))
-    UC3((Request Facilities))
-    UC4((View Training History))
-    UC5((Approve Requests))
-    UC6((Manage Payments))
-    UC7((Manage Members))
-    UC8((Manage Trainers & Schedules))
+    %% Use Cases styled as ellipse (GitHub-friendly)
+    UC1([Register for Membership])
+    UC2([Book Training Session])
+    UC3([Request Facilities])
+    UC4([View Training History])
+    UC5([Approve Requests])
+    UC6([Manage Payments])
+    UC7([Manage Members])
+    UC8([Manage Trainers & Schedules])
 
     %% Connections
     Member --> UC1
@@ -28,7 +29,13 @@ flowchart TD
     Admin --> UC8
     Admin --> UC6
 
-    %% Style Use Cases (تمام دایره‌ها صورتی)
+    %% Pink oval style (works in GitHub)
     style UC1 fill:#FFB6C1,stroke:#333,stroke-width:2px
     style UC2 fill:#FFB6C1,stroke:#333,stroke-width:2px
-    style UC3 fill:#FFB6C1,stroke:#33…
+    style UC3 fill:#FFB6C1,stroke:#333,stroke-width:2px
+    style UC4 fill:#FFB6C1,stroke:#333,stroke-width:2px
+    style UC5 fill:#FFB6C1,stroke:#333,stroke-width:2px
+    style UC6 fill:#FFB6C1,stroke:#333,stroke-width:2px
+    style UC7 fill:#FFB6C1,stroke:#333,stroke-width:2px
+    style UC8 fill:#FFB6C1,stroke:#333,stroke-width:2px
+```
