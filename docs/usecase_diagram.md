@@ -1,41 +1,41 @@
 ```mermaid
-flowchart TD
+flowchart RL
 
-    %% Actors
-    Member([🏋️‍♂️ Club Member])
-    Trainer([🧑‍🏫 Trainer])
-    Admin([👤 Admin])
+%% بازیگران
+Member([🏋️‍♂️ عضو باشگاه])
+Trainer([🧑‍🏫 مربی])
+Admin([👤 مدیر])
 
-    %% Use Cases styled as ellipse (GitHub-friendly)
-    UC1([Register for Membership])
-    UC2([Book Training Session])
-    UC3([Request Facilities])
-    UC4([View Training History])
-    UC5([Approve Requests])
-    UC6([Manage Payments])
-    UC7([Manage Members])
-    UC8([Manage Trainers & Schedules])
+%% موارد استفاده (Use Cases)
+UC1([ثبت‌نام عضویت])
+UC2([رزرو جلسه تمرینی])
+UC3([درخواست استفاده از امکانات])
+UC4([مشاهده سوابق تمرینی])
+UC5([تأیید درخواست‌ها])
+UC6([مدیریت پرداخت‌ها])
+UC7([مدیریت اعضا])
+UC8([مدیریت مربیان و برنامه‌ها])
 
-    %% Connections
-    Member --> UC1
-    Member --> UC2
-    Member --> UC3
-    Member --> UC4
+%% ارتباطات
+Member --> UC1
+Member --> UC2
+Member --> UC3
+Member --> UC4
 
-    Trainer --> UC2
-    Trainer --> UC5
+Trainer --> UC2
+Trainer --> UC5
 
-    Admin --> UC7
-    Admin --> UC8
-    Admin --> UC6
+Admin --> UC7
+Admin --> UC8
+Admin --> UC6
 
-    %% Pink oval style (works in GitHub)
-    style UC1 fill:#FFB6C1,stroke:#333,stroke-width:2px
-    style UC2 fill:#FFB6C1,stroke:#333,stroke-width:2px
-    style UC3 fill:#FFB6C1,stroke:#333,stroke-width:2px
-    style UC4 fill:#FFB6C1,stroke:#333,stroke-width:2px
-    style UC5 fill:#FFB6C1,stroke:#333,stroke-width:2px
-    style UC6 fill:#FFB6C1,stroke:#333,stroke-width:2px
-    style UC7 fill:#FFB6C1,stroke:#333,stroke-width:2px
-    style UC8 fill:#FFB6C1,stroke:#333,stroke-width:2px
+%% ظاهر بیضی‌ها (صورتی)
+style UC1 fill:#FFB6C1,stroke:#333,stroke-width:2px
+style UC2 fill:#FFB6C1,stroke:#333,stroke-width:2px
+style UC3 fill:#FFB6C1,stroke:#333,stroke-width:2px
+style UC4 fill:#FFB6C1,stroke:#333,stroke-width:2px
+style UC5 fill:#FFB6C1,stroke:#333,stroke-width:2px
+style UC6 fill:#FFB6C1,stroke:#333,stroke-width:2px
+style UC7 fill:#FFB6C1,stroke:#333,stroke-width:2px
+style UC8 fill:#FFB6C1,stroke:#333,stroke-width:2px
 ```
