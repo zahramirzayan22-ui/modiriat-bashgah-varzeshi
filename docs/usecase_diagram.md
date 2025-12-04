@@ -87,8 +87,7 @@ style UC6 fill:#E8F5E9,stroke:#4CAF50,stroke-width:2px
 style UC7 fill:#E8F5E9,stroke:#4CAF50,stroke-width:2px
 style UC8 fill:#E8F5E9,stroke:#4CAF50,stroke-width:2px
 
-%% استایل زیرمجموعه‌ها (سفید/خاکستری روشن)
-style UC1a,UC1b,UC1c,UC2a,UC2b,UC2c,UC3a,UC4a,UC4b,UC5a,UC5b,UC6a,UC7a,UC7b,UC8a,UC8b fill:#FFFFFF,stroke:#BDBDBD,stroke-width:1px
+
 
 %% استایل گروه‌ها (Subgraphs)
 style عضویت fill:#F1F8E9,stroke:#B2DFDB,stroke-dasharray: 5 5
