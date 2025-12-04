@@ -89,6 +89,8 @@ style UC8 fill:#E8F5E9,stroke:#4CAF50,stroke-width:2px
 
 
 
+
+
 %% استایل گروه‌ها (Subgraphs)
 style عضویت fill:#F1F8E9,stroke:#B2DFDB,stroke-dasharray: 5 5
 style تمرینات fill:#F1F8E9,stroke:#B2DFDB,stroke-dasharray: 5 5
