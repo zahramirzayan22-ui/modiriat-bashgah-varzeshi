@@ -1,51 +1,30 @@
-# نمودار کلاس سیستم باشگاه ورزشی
-
-mermaid
-
-    
-    class Trainer {
+```mermaid
+classDiagram
+    class Member {
         -id: int
         -name: string
-        -specialty: string
-        -hourlyRate: float
-        +addClass(class: Class): void
-        +getSchedule(date: Date): Class[]
+        -membershipType: string
+        +register()
+        +makeReservation()
+    }
+    
+    class Reservation {
+        -id: int
+        -date: DateTime
+        -status: string
+        +confirm()
+        +cancel()
     }
     
     class Class {
         -id: int
         -name: string
-        -description: string
+        -time: DateTime
         -capacity: int
-        -schedule: DateTime
-        +isFull(): boolean
-        +getAvailableSlots(): int
-        +addToWaitlist(member: Member): void
+        +checkAvailability()
     }
     
-    class Reservation {
-        -id: int
-        -reservationDate: DateTime
-        -status: string
-        -paymentId: int
-        +confirm(): void
-        +cancel(): boolean
-        +checkIn(): void
-    }
-    
-    class Payment {
-        -id: int
-        -amount: float
-        -paymentDate: DateTime
-        -paymentMethod: string
-        +processPayment(): boolean
-        +generateReceipt(): string
-    }
-    
-    %% تعریف روابط بین کلاس‌ها
-    Member "1" -- "*" Reservation : makes
-    Member "*" -- "*" Class : attends
-    Trainer "1" -- "*" Class : teaches
-    Class "1" -- "*" Reservation : has
-    Reservation "1" -- "1" Payment : has
+    Member --> Reservation : creates
+    Reservation --> Class : reserves
+    Member --> Class : attends
     ```
