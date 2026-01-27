@@ -1,19 +1,7 @@
 # نمودار کلاس سیستم باشگاه ورزشی
 
 mermaid
-classDiagram
-    %% تعریف کلاس‌ها
-    class Member {
-        -id: int
-        -name: string
-        -email: string
-        -phone: string
-        -joinDate: Date
-        +register(): void
-        +renewMembership(): void
-        +makeReservation(classId: int): Reservation
-        +cancelReservation(reservationId: int): boolean
-    }
+
     
     class Trainer {
         -id: int
