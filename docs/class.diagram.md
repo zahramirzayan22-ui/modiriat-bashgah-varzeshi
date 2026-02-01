@@ -1,63 +1,62 @@
-# نمودار کلاس سیستم باشگاه ورزشی
-
+# نمودار کلاس سیستم باشگاه ورزش
 ```mermaid
 classDiagram
     %% تعریف کلاس‌ها
-    class Member {
-        -id: int
-        -name: string
-        -email: string
-        -phone: string
-        -joinDate: Date
-        +register(): void
-        +renewMembership(): void
-        +makeReservation(classId: int): Reservation
-        +cancelReservation(reservationId: int): boolean
+    class عضو {
+        -شناسه: int
+        -نام: string
+        -ایمیل: string
+        -تلفن: string
+        -تاریخ_عضویت: Date
+        +ثبت‌نام(): void
+        +تمدید_عضویت(): void
+        +رزرو_کلاس(شناسه_کلاس: int): رزرو
+        +لغو_رزرو(شناسه_رزرو: int): boolean
     }
     
-    class Trainer {
-        -id: int
-        -name: string
-        -specialty: string
-        -hourlyRate: float
-        +addClass(class: Class): void
-        +getSchedule(date: Date): Class[]
+    class مربی {
+        -شناسه: int
+        -نام: string
+        -تخصص: string
+        -نرخ_ساعتی: float
+        +افزودن_کلاس(کلاس: کلاس): void
+        +دریافت_برنامه(تاریخ: Date): کلاس[]
     }
     
-    class Class {
-        -id: int
-        -name: string
-        -description: string
-        -capacity: int
-        -schedule: DateTime
-        +isFull(): boolean
-        +getAvailableSlots(): int
-        +addToWaitlist(member: Member): void
+    class کلاس {
+        -شناسه: int
+        -نام: string
+        -توضیحات: string
+        -ظرفیت: int
+        -زمان_برگزاری: DateTime
+        +آیا_پر_است؟(): boolean
+        +اسلات‌های_خالی(): int
+        +افزودن_به_لیست_انتظار(عضو: عضو): void
     }
     
-    class Reservation {
-        -id: int
-        -reservationDate: DateTime
-        -status: string
-        -paymentId: int
-        +confirm(): void
-        +cancel(): boolean
-        +checkIn(): void
+    class رزرو {
+        -شناسه: int
+        -تاریخ_رزرو: DateTime
+        -وضعیت: string
+        -شناسه_پرداخت: int
+        +تأیید(): void
+        +لغو(): boolean
+        +ورود_به_کلاس(): void
     }
     
-    class Payment {
-        -id: int
-        -amount: float
-        -paymentDate: DateTime
-        -paymentMethod: string
-        +processPayment(): boolean
-        +generateReceipt(): string
+    class پرداخت {
+        -شناسه: int
+        -مبلغ: float
+        -تاریخ_پرداخت: DateTime
+        -روش_پرداخت: string
+        +پردازش_پرداخت(): boolean
+        +صدور_رسید(): string
     }
     
     %% تعریف روابط بین کلاس‌ها
-    Member "1" -- "*" Reservation : makes
-    Member "*" -- "*" Class : attends
-    Trainer "1" -- "*" Class : teaches
-    Class "1" -- "*" Reservation : has
-    Reservation "1" -- "1" Payment : has
-    ```
+    عضو "1" -- "*" رزرو : انجام_می‌دهد
+    عضو "*" -- "*" کلاس : شرکت_می‌کند
+    مربی "1" -- "*" کلاس : آموزش_می‌دهد
+    کلاس "1" -- "*" رزرو : شامل
+    رزرو "1" -- "1" پرداخت : دارد
+```
